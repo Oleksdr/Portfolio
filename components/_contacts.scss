@@ -1,0 +1,134 @@
+#contact {
+  padding: 60px 120px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(120, 120, 255, 0.2), transparent 35%),
+    radial-gradient(circle at 70% 80%, rgba(120, 255, 200, 0.12), transparent 40%),
+    #050505;
+  color: white;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #ffffff 0%, #a0a0ff 50%, #7fe8c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.contact-container h2.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-box {
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.input-box.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 18px 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+.input-box label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.input-box.textarea label {
+  top: 20px;
+  transform: none;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+  border-color: rgba(120, 120, 255, 0.5);
+  background: rgba(120, 120, 255, 0.05);
+  box-shadow: 0 0 20px rgba(120, 120, 255, 0.07);
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label,
+.input-box textarea:focus + label,
+.input-box textarea:valid + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: rgba(140, 140, 255, 0.9);
+}
+
+.contact-form button {
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(120, 120, 255, 0.15);
+  border: 1px solid rgba(120, 120, 255, 0.4);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: background 0.3s ease, box-shadow 0.3s ease,
+              opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact-form button.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  background: rgba(120, 120, 255, 0.28);
+  box-shadow: 0 0 30px rgba(120, 120, 255, 0.22);
+}
+
+.contact-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.3px;
+}
