@@ -1,0 +1,260 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+body {
+  background: #1a1d24;
+  background-image:
+    radial-gradient(ellipse at 15% 30%, rgba(100, 100, 255, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 65%, rgba(80, 200, 190, 0.05) 0%, transparent 55%);
+  padding-top: 80px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(31, 36, 40, 0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+  animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transition: background 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(14, 17, 22, 0.92);
+  border-bottom-color: rgba(120, 120, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.55);
+}
+
+.navbar div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar div a {
+  text-decoration: none;
+  margin: 10px;
+  padding: 14px 16px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  transition: color 0.25s ease, border-color 0.25s ease,
+              background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar div a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(120, 120, 255, 0.8), rgba(100, 220, 190, 0.7));
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar div a:hover,
+.navbar div a.active {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+.navbar div a:hover::after,
+.navbar div a.active::after {
+  width: 75%;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.navbar nav a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.navbar nav a:hover {
+  transform: scale(1.15) translateY(-2px);
+  filter: brightness(1.25);
+}
+
+.navbar nav a:last-child {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+.navbar nav a.linkedin-link {
+  width: 28px;
+  height: 28px;
+}
+
+
+// ============================================================
+//  Menu burger (masqué sur ordinateur, visible sur mobile)
+// ============================================================
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease, opacity 0.2s ease, background 0.3s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(120, 120, 255, 0.45);
+    background: rgba(120, 120, 255, 0.08);
+    outline: none;
+  }
+}
+
+// icône burger -> croix quand le menu est ouvert
+.navbar.menu-open .burger {
+  border-color: rgba(120, 120, 255, 0.55);
+  box-shadow: 0 0 20px rgba(120, 120, 255, 0.2);
+
+  span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    background: rgba(160, 160, 255, 1);
+  }
+  span:nth-child(2) {
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background: rgba(100, 220, 190, 1);
+  }
+}
+
+// ============================================================
+//  Responsive
+// ============================================================
+
+@media (max-width: 900px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .navbar.menu-open {
+    background: rgba(14, 17, 22, 0.97);
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  // Les liens deviennent un panneau déroulant sous la barre
+  .navbar .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 14px 20px 22px;
+    background: rgba(14, 17, 22, 0.97);
+    border-bottom: 1px solid rgba(120, 120, 255, 0.15);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  }
+
+  .navbar.menu-open .nav-links {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navbar .nav-links a {
+    margin: 0;
+    padding: 14px 18px;
+    text-align: left;
+  }
+
+  .navbar .nav-links a:hover,
+  .navbar .nav-links a.active {
+    transform: none;
+  }
+
+  .navbar .nav-links a::after {
+    left: 18px;
+    transform: none;
+  }
+
+  .navbar .nav-links a:hover::after,
+  .navbar .nav-links a.active::after {
+    width: 40px;
+  }
+
+  .navbar nav {
+    gap: 14px;
+  }
+
+  .navbar nav a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar nav a.linkedin-link {
+    width: 25px;
+    height: 25px;
+  }
+
+  .navbar nav a:last-child {
+    width: 23px;
+    height: 23px;
+  }
+}
