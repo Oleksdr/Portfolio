@@ -63,9 +63,7 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
-// ============================================================
 //  Menu burger (mobile)
-// ============================================================
 
 const navbarEl = document.querySelector('.navbar');
 const burger = document.querySelector('.burger');
