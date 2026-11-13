@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oleksandr Chekalovskyi · Développeur fullstack en formation</title>
+    <meta name="description" content="Portfolio d'Oleksandr Chekalovskyi, étudiant en BUT Informatique à l'IUT2 Grenoble Alpes. Projets web, desktop et bases de données, de l'interface jusqu'aux données.">
+    <meta name="author" content="Oleksandr Chekalovskyi">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Oleksandr Chekalovskyi · Portfolio">
+    <meta property="og:description" content="Étudiant en BUT Informatique à Grenoble. Je construis des applications de l'interface jusqu'à la base de données.">
+    <meta name="theme-color" content="#F4F5F7">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314213D'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='%23F4F5F7' text-anchor='middle'%3EOC%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="components/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Retour en haut de page">OC</a>
+        <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+            <a href="#about">À propos</a>
+            <a href="#projects">Projets</a>
+            <a href="#skills">Compétences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-social">
+            <a href="https://github.com/Oleksdr" target="_blank" rel="noopener" aria-label="GitHub (nouvel onglet)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/oleksandr-chekalovskyi-381166309" target="_blank" rel="noopener" aria-label="LinkedIn (nouvel onglet)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
+        </div>
+        <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span>
+        </button>
+    </header>
+
+    <main id="main">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="top">
+            <p class="hero-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>En recherche de stage · BUT Informatique, 2<sup>e</sup>&nbsp;année</span>
+            </p>
+            <h1 class="hero-name">
+                <span><i>Oleksandr</i></span>
+                <span><i>Chekalovskyi</i></span>
+            </h1>
+            <p class="hero-lead">
+                Futur développeur fullstack. Je construis des applications complètes, de l'interface que l'on touche jusqu'à la base de données qui la fait tenir.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#projects">Voir mes projets</a>
+            </div>
+        </section>
+
+        <!-- ============ À PROPOS ============ -->
+        <section class="section about" id="about" aria-labelledby="about-title">
+            <h2 class="section-title" id="about-title">À propos</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Étudiant en deuxième année de BUT Informatique à l'IUT2 de l'Université Grenoble Alpes, je développe des applications web et desktop. J'aime soigner les interfaces, propres et agréables à utiliser, autant que comprendre ce qui se passe derrière&nbsp;: logique métier, structure des données, architecture.
+                    </p>
+                    <p>
+                        Ce qui me motive, c'est de partir d'une idée ou d'un besoin client et d'aboutir à une application qui fonctionne vraiment. Les projets d'équipe de l'IUT, jusqu'à sept personnes, m'ont appris à recueillir un besoin, à le découper et à livrer dans les délais.
+                    </p>
+                </div>
+                <dl class="about-facts">
+                    <div>
+                        <dt>Basé à</dt>
+                        <dd>Grenoble, France</dd>
+                    </div>
+                    <div>
+                        <dt>Formation</dt>
+                        <dd>BUT Informatique, IUT2 Grenoble Alpes</dd>
+                    </div>
+                    <div>
+                        <dt>Objectif</dt>
+                        <dd>Développeur fullstack</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ============ PROJETS ============ -->
+        <section class="section projects" id="projects" aria-labelledby="projects-title">
+            <div class="section-head">
+                <h2 class="section-title" id="projects-title">Projets</h2>
+                <p class="section-intro">Sept projets menés à l'IUT, seul ou en équipe. Pour chacun&nbsp;: le contexte, ce que j'ai fait moi-même et les technologies utilisées.</p>
+            </div>
+
+            <article class="project project-featured">
+                <div class="project-meta">
+                    <p class="project-kind">Application fullstack</p>
+                    <p class="project-team"><strong>7</strong> personnes</p>
+                </div>
+                <div class="project-body">
+                    <h3>Application client-serveur sécurisée</h3>
+                    <p class="project-summary">Une application client-serveur appuyée sur une base de données, construite à partir d'un besoin client décrit en quelques lignes. Le projet suivait une gestion en quatre phases, avec un objectif de qualité&nbsp;: ergonomie, tests et sécurité.</p>
+                    <div class="project-role">
+                        <h4>Mon rôle</h4>
+                        <ul>
+                            <li>Recueil des besoins et modélisation&nbsp;: cas d'utilisation, maquettes, modèle de données</li>
+                            <li>Développement en C++, PHP, HTML, CSS et JavaScript sur une base SQL</li>
+                            <li>Tests, sécurisation et présentation lors des soutenances</li>
+                        </ul>
+                    </div>
+                    <ul class="tech-list" aria-label="Technologies">
+                        <li>C++</li><li>PHP</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>SQL</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project-meta">
+                    <p class="project-kind">Application desktop</p>
+                    <p class="project-team"><strong>5</strong> personnes</p>
+                </div>
+                <div class="project-body">
+                    <h3>Application Java avec interface JavaFX</h3>
+                    <p class="project-summary">Une application desktop avec interface graphique, conçue en programmation orientée objet avec gestion des événements.</p>
+                    <div class="project-role">
+                        <h4>Mon rôle</h4>
+                        <p>Algorithmes de traitement des données et architecture objet&nbsp;: classes, héritage, encapsulation et polymorphisme.</p>
+                    </div>
+                    <ul class="tech-list" aria-label="Technologies"><li>Java</li><li>JavaFX</li></ul>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project-meta">
+                    <p class="project-kind">Site web</p>
+                    <p class="project-team"><strong>4</strong> personnes</p>
+                </div>
+                <div class="project-body">
+                    <h3>Site web réalisé selon un cahier des charges</h3>
+                    <p class="project-summary">Un site complet dont les fonctionnalités et le design étaient fixés par un cahier des charges précis, à respecter jusqu'à la livraison.</p>
+                    <div class="project-role">
+                        <h4>Mon rôle</h4>
+                        <p>Intégration de plusieurs pages en HTML et mise en forme complète en CSS, dans le respect de la charte graphique.</p>
+                    </div>
+                    <ul class="tech-list" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project-meta">
+                    <p class="project-kind">Base de données</p>
+                    <p class="project-team"><strong>2</strong> personnes</p>
+                </div>
+                <div class="project-body">
+                    <h3>Conception d'une base de données relationnelle</h3>
+                    <p class="project-summary">De la modélisation à l'interrogation&nbsp;: schéma, création des tables et requêtes de manipulation des données.</p>
+                    <div class="project-role">
+                        <h4>Mon rôle</h4>
+                        <p>Définition du schéma et des tables, puis requêtes SQL avec filtres pour extraire des informations ciblées.</p>
+                    </div>
+                    <ul class="tech-list" aria-label="Technologies"><li>SQL</li></ul>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project-meta">
+                    <p class="project-kind">Algorithmique</p>
+                    <p class="project-team"><strong>2</strong> personnes</p>
+                </div>
+                <div class="project-body">
+                    <h3>Chatbot qui apprend de nouvelles réponses</h3>
+                    <p class="project-summary">Un chatbot en Java qui répond aux questions et, quand il ne connaît pas la réponse, la demande à l'utilisateur pour la retenir.</p>
+                    <div class="project-role">
+                        <h4>Mon rôle</h4>
+                        <p>Logique de dialogue, gestion du dictionnaire de connaissances et mémorisation des nouvelles réponses.</p>
+                    </div>
+                    <ul class="tech-list" aria-label="Technologies"><li>Java</li></ul>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project-meta">
+                    <p class="project-kind">Système et réseau</p>
+                    <p class="project-team"><strong>Seul</strong></p>
+                </div>
+                <div class="project-body">
+                    <h3>Serveur Linux sur machine virtuelle</h3>
+                    <p class="project-summary">Installation d'une VM et déploiement de Linux en ligne de commande, puis mise en place des services réseau, des utilisateurs et des droits.</p>
+                    <div class="project-role">
+                        <h4>Mon rôle</h4>
+                        <p>Configuration de SSH pour l'accès à distance, Apache comme serveur web, PHP, PostgreSQL et phpPgAdmin pour l'administration de la base.</p>
+                    </div>
+                    <ul class="tech-list" aria-label="Technologies"><li>Linux</li><li>Bash</li><li>SSH</li><li>Apache</li><li>PostgreSQL</li></ul>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project-meta">
+                    <p class="project-kind">Conception UX</p>
+                    <p class="project-team"><strong>4</strong> personnes</p>
+                </div>
+                <div class="project-body">
+                    <h3>Maquettes fil de fer d'une application</h3>
+                    <p class="project-summary">Structurer l'interface et la navigation d'une application avant d'écrire la moindre ligne de code.</p>
+                    <div class="project-role">
+                        <h4>Mon rôle</h4>
+                        <p>Maquettes de plusieurs écrans sur Whimsical&nbsp;: navigation, composants et hiérarchie des pages.</p>
+                    </div>
+                    <ul class="tech-list" aria-label="Technologies"><li>Whimsical</li></ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ COMPÉTENCES ============ -->
+        <section class="section skills" id="skills" aria-labelledby="skills-title">
+            <div class="section-head">
+                <h2 class="section-title" id="skills-title">Compétences</h2>
+                <p class="section-intro">Rangées comme une application&nbsp;: de ce que voit l'utilisateur jusqu'à la machine qui fait tourner le tout.</p>
+            </div>
+
+            <ol class="stack">
+                <li class="layer layer-1">
+                    <div class="layer-head">
+                        <h3>Interface</h3>
+                        <p>Ce que l'utilisateur voit et manipule</p>
+                    </div>
+                    <ul class="layer-items"><li>HTML</li><li>CSS / Sass</li><li>JavaScript</li><li>JavaFX</li><li>Maquettage</li></ul>
+                </li>
+                <li class="layer layer-2">
+                    <div class="layer-head">
+                        <h3>Logique</h3>
+                        <p>Règles métier et traitements</p>
+                    </div>
+                    <ul class="layer-items"><li>Java</li><li>PHP</li><li>C++</li><li>C</li><li>Programmation objet</li></ul>
+                </li>
+                <li class="layer layer-3">
+                    <div class="layer-head">
+                        <h3>Données</h3>
+                        <p>Modéliser, stocker, interroger</p>
+                    </div>
+                    <ul class="layer-items"><li>SQL</li><li>PostgreSQL</li><li>Modélisation</li><li>R</li></ul>
+                </li>
+                <li class="layer layer-4">
+                    <div class="layer-head">
+                        <h3>Système</h3>
+                        <p>Là où l'application tourne</p>
+                    </div>
+                    <ul class="layer-items"><li>Linux</li><li>Bash</li><li>SSH</li><li>Apache</li></ul>
+                </li>
+            </ol>
+
+            <div class="tools">
+                <h3>Outils au quotidien</h3>
+                <ul class="tools-list">
+                    <li>Git</li><li>GitHub</li><li>GitLab</li><li>IntelliJ IDEA</li><li>VS Code</li><li>RStudio</li><li>Whimsical</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <div class="contact-intro">
+                <h2 class="section-title" id="contact-title">Contact</h2>
+                <p>Une offre de stage, une question sur un projet ou simplement envie d'échanger&nbsp;? Écrivez-moi ici ou retrouvez-moi sur LinkedIn.</p>
+                <ul class="contact-links">
+                    <li><a href="https://www.linkedin.com/in/oleksandr-chekalovskyi-381166309" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://github.com/Oleksdr" target="_blank" rel="noopener">GitHub</a></li>
+                </ul>
+            </div>
+
+            <form class="contact-form" novalidate>
+                <div class="field">
+                    <label for="f-name">Nom</label>
+                    <input id="f-name" type="text" name="name" autocomplete="name" required>
+                </div>
+                <div class="field">
+                    <label for="f-email">Email</label>
+                    <input id="f-email" type="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="f-message">Message</label>
+                    <textarea id="f-message" name="message" rows="6" required></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Envoyer le message</button>
+                <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span data-year>2026</span> Oleksandr Chekalovskyi</p>
+        <a href="#top">Retour en haut</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="navbar.js" defer></script>
+    <script src="contact.js" defer></script>
+    <script src="animations.js" defer></script>
+</body>
+</html>

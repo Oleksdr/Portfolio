@@ -1,0 +1,108 @@
+@use "variables" as *;
+
+.project {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid $line;
+
+  &:last-child { border-bottom: 1px solid $line; }
+
+  h3 {
+    font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+    font-variation-settings: "wdth" 90;
+    margin-bottom: .75rem;
+  }
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+    gap: .75rem;
+  }
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding-top: .35rem;
+
+  @media (max-width: $bp-md) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+  }
+}
+
+.project-kind {
+  color: $cobalt;
+  font-weight: 600;
+}
+
+.project-team {
+  color: $muted;
+  strong { color: $ink; }
+}
+
+.project-summary {
+  max-width: 64ch;
+  color: $ink-2;
+}
+
+.project-role {
+  margin: 1.1rem 0 1.25rem;
+  padding-left: 1rem;
+  border-left: 2px solid $cobalt;
+  max-width: 64ch;
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: .3rem;
+  }
+  p, li { color: $ink-2; }
+  li {
+    position: relative;
+    padding-left: 1rem;
+    & + li { margin-top: .25rem; }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .7em;
+      width: 6px;
+      height: 2px;
+      background: $muted;
+    }
+  }
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+
+  li {
+    padding: .2rem .65rem;
+    border: 1px solid $line;
+    border-radius: 6px;
+    background: $surface;
+    font-size: .9rem;
+    font-weight: 600;
+    color: $ink-2;
+  }
+}
+
+// Projet principal : mis en avant
+.project-featured {
+  background: $surface;
+  border: 1.5px solid $ink;
+  border-radius: 20px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+
+  h3 { font-size: clamp(1.75rem, 3.6vw, 2.75rem); }
+  .project-summary { font-size: 1.15rem; }
+  .tech-list li { background: $paper; }
+
+  & + .project { border-top: 0; }
+}

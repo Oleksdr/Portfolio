@@ -1,0 +1,94 @@
+@use "variables" as *;
+
+// La pile : chaque couche est plus large que celle du dessus,
+// comme les étages d'une application posés les uns sur les autres.
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.layer {
+  display: grid;
+  grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem clamp(1.25rem, 3vw, 2.25rem);
+  border-radius: 14px;
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.layer-head {
+  h3 {
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    font-variation-settings: "wdth" 85;
+  }
+  p { font-size: .95rem; opacity: .8; }
+}
+
+.layer-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+
+  li {
+    padding: .35rem .85rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .98rem;
+  }
+}
+
+.layer-1 {
+  margin-inline: 9%;
+  background: $surface;
+  border: 1.5px solid $line;
+  .layer-items li { background: $paper; color: $ink; }
+}
+.layer-2 {
+  margin-inline: 6%;
+  background: $cobalt-soft;
+  .layer-items li { background: $surface; color: $ink; }
+}
+.layer-3 {
+  margin-inline: 3%;
+  background: $cobalt;
+  color: $surface;
+  .layer-items li { background: rgba($surface, .14); color: $surface; }
+}
+.layer-4 {
+  background: $ink;
+  color: $paper;
+  .layer-items li { background: rgba($surface, .1); color: $paper; }
+}
+
+@media (max-width: $bp-sm) {
+  .layer-1 { margin-inline: 18px; }
+  .layer-2 { margin-inline: 12px; }
+  .layer-3 { margin-inline: 6px; }
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: baseline;
+  margin-top: 3rem;
+  padding: 0 clamp(1.25rem, 3vw, 2.25rem);
+
+  h3 { font-size: 1.15rem; }
+
+  @media (max-width: $bp-md) { grid-template-columns: 1fr; gap: .75rem; padding: 0; }
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.5rem;
+  color: $ink-2;
+  font-weight: 600;
+}

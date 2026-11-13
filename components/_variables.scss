@@ -1,0 +1,21 @@
+// Palette
+$paper:   #F4F5F7;   // fond
+$surface: #FFFFFF;   // cartes, champs
+$ink:     #14213D;   // texte principal, couche "système"
+$ink-2:   #3A4560;   // texte secondaire fort
+$muted:   #5D6679;   // texte discret (contraste AA sur $paper)
+$line:    #D9DDE4;   // filets
+$cobalt:  #2541D9;   // accent, liens, couche "données"
+$cobalt-soft: #DCE3F5;
+$signal:  #F2B705;   // disponibilité
+
+// Typo
+$display: "Bricolage Grotesque", "Arial Narrow", sans-serif;
+$text:    "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+
+// Mise en page
+$max: 1180px;
+$gutter: clamp(1.25rem, 5vw, 4rem);
+
+$bp-md: 900px;
+$bp-sm: 600px;

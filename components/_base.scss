@@ -1,0 +1,106 @@
+@use "variables" as *;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: $paper;
+  color: $ink;
+  font-family: $text;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: $display;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+::selection { background: $cobalt; color: $surface; }
+
+:focus-visible {
+  outline: 3px solid $cobalt;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 2000;
+  padding: .6rem 1rem;
+  background: $ink;
+  color: $surface;
+  border-radius: 8px;
+  text-decoration: none;
+  &:focus { top: 1rem; }
+}
+
+// Sections
+.section {
+  max-width: $max;
+  margin: 0 auto;
+  padding: clamp(4.5rem, 10vw, 8rem) $gutter;
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.section-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  font-variation-settings: "wdth" 85;
+  letter-spacing: -0.02em;
+}
+
+.section-intro {
+  color: $muted;
+  max-width: 52ch;
+}
+
+// Boutons
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 48px;
+  padding: .75rem 1.4rem;
+  border-radius: 999px;
+  border: 1.5px solid $ink;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, transform .2s ease;
+
+  &:active { transform: translateY(1px); }
+}
+
+.btn-primary {
+  background: $ink;
+  color: $surface;
+  &:hover { background: $cobalt; border-color: $cobalt; }
+}
+
+.btn-ghost {
+  background: transparent;
+  color: $ink;
+  &:hover { background: $ink; color: $surface; }
+}

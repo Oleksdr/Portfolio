@@ -1,0 +1,102 @@
+@use "variables" as *;
+
+.hero {
+  max-width: $max;
+  margin: 0 auto;
+  min-height: calc(100svh - 74px);
+  padding: clamp(3rem, 8vh, 6rem) $gutter clamp(3rem, 8vh, 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  align-self: flex-start;
+  padding: .4rem .9rem .4rem .75rem;
+  margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  background: $surface;
+  border: 1px solid $line;
+  border-radius: 999px;
+  font-size: .95rem;
+  font-weight: 600;
+  color: $ink-2;
+
+  sup { font-size: .65em; line-height: 0; }
+  .status-dot { flex: none; }
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $signal;
+  box-shadow: 0 0 0 4px rgba($signal, .25);
+}
+
+.hero-name {
+  font-size: clamp(3.4rem, 13.5vw, 11rem);
+  font-weight: 800;
+  font-variation-settings: "wdth" 80, "opsz" 96;
+  line-height: .88;
+  letter-spacing: -0.012em;
+  margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+
+  span { display: block; }
+  i { font-style: normal; }
+  span:last-child { padding-left: .55em; }
+}
+
+.hero-lead {
+  max-width: 34ch;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  line-height: 1.45;
+  color: $ink-2;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+@media (max-width: $bp-sm) {
+  .hero { min-height: 0; justify-content: flex-start; padding-top: 2.5rem; }
+  .hero-status { font-size: .875rem; }
+  .hero-name { font-size: 18.5vw; }
+  .hero-name span:last-child { padding-left: 0; }
+  .hero-actions .btn { flex: 1 1 100%; }
+}
+
+// À propos
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  margin-top: 2.5rem;
+
+  @media (max-width: $bp-md) { grid-template-columns: 1fr; }
+}
+
+.about-text p {
+  max-width: 62ch;
+  font-size: 1.15rem;
+  & + p { margin-top: 1.2rem; }
+}
+
+.about-facts {
+  border-top: 2px solid $ink;
+
+  div {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid $line;
+  }
+  dt { color: $muted; }
+  dd { font-weight: 600; }
+}

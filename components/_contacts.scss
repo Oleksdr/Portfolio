@@ -1,0 +1,89 @@
+@use "variables" as *;
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+
+  @media (max-width: $bp-md) { grid-template-columns: 1fr; }
+}
+
+.contact-intro {
+  p {
+    margin: 1.25rem 0 1.75rem;
+    max-width: 40ch;
+    font-size: 1.15rem;
+    color: $ink-2;
+  }
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    font-weight: 600;
+    color: $cobalt;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    &:hover { color: $ink; }
+  }
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: $surface;
+  border: 1px solid $line;
+  border-radius: 20px;
+
+  .btn { justify-self: start; }
+  @media (max-width: $bp-sm) { .btn { justify-self: stretch; } }
+}
+
+.field {
+  display: grid;
+  gap: .4rem;
+
+  label { font-weight: 600; font-size: .95rem; }
+
+  input, textarea {
+    width: 100%;
+    padding: .8rem 1rem;
+    background: $paper;
+    border: 1.5px solid $line;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color .2s ease, background-color .2s ease;
+
+    &:hover { border-color: #B4BCC8; }
+    &:focus { outline: none; border-color: $cobalt; background: $surface; box-shadow: 0 0 0 3px rgba($cobalt, .15); }
+    &[aria-invalid="true"] { border-color: #C2362B; }
+  }
+
+  textarea { resize: vertical; min-height: 9rem; }
+}
+
+.form-status {
+  min-height: 1.5em;
+  font-weight: 600;
+  &.is-success { color: #1D7A46; }
+  &.is-error { color: #C2362B; }
+}
+
+.site-footer {
+  max-width: $max;
+  margin: 0 auto;
+  padding: 2rem $gutter 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid $line;
+  color: $muted;
+  font-size: .95rem;
+
+  a { color: $ink-2; font-weight: 600; text-underline-offset: 3px; }
+}
